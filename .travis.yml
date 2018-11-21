@@ -2,15 +2,6 @@ language: java
 jdk: oraclejdk8
 sudo: required
 group: deprecated-2017Q2
-addons:
-  coverity_scan:
-    project:
-      name: rajsarkapally/calculator
-      description: Build submitted via Travis CI
-    notification_email: rsarkapally@salesforce.com
-    build_command_prepend: mvn clean
-    build_command: mvn install
-    branch_pattern: master
 cache:
   directories:
   - "$HOME/.m2/repository"
