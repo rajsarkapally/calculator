@@ -5,11 +5,11 @@ group: deprecated-2017Q2
 addons:
   coverity_scan:
     project:
-      name: SalesforceEng/Argus
+      name: rajsarkapally/calculator
       description: Build submitted via Travis CI
-    notification_email: tvaline@salesforce.com
+    notification_email: rsarkapally@salesforce.com
     build_command_prepend: mvn clean
-    build_command: mvn -DskipTests=true install
+    build_command: mvn install
     branch_pattern: master
 cache:
   directories:
