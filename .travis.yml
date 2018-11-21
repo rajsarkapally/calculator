@@ -1,0 +1,21 @@
+language: java
+jdk: oraclejdk8
+sudo: required
+group: deprecated-2017Q2
+addons:
+  coverity_scan:
+    project:
+      name: SalesforceEng/Argus
+      description: Build submitted via Travis CI
+    notification_email: tvaline@salesforce.com
+    build_command_prepend: mvn clean
+    build_command: mvn -DskipTests=true install
+    branch_pattern: master
+cache:
+  directories:
+  - "$HOME/.m2/repository"
+before_script:
+- pip install --user codecov
+after_success:
+- codecov
+- df -h
